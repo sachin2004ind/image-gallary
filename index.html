@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="top">
+        <h2>Image Gallery</h2>
+        <p>Click on the images below:</p>
+    </div>
+
+    <!-- The four galary -->
+    <div class="gallary">
+        <div class="galary-box">
+            <img src="1.jpg"  id="width" onclick="myFunction(this);">
+        </div>
+        <div class="galary-box">
+            <img src="2.jpeg"  id="width" onclick="myFunction(this);">
+        </div>
+        <div class="galary-box">
+            <img src="3.jpeg" id="width" onclick="myFunction(this);">
+        </div>
+        <div class="galary-box">
+            <img src="4.jpg"  id="width" onclick="myFunction(this);">
+        </div>
+        <div class="galary-box">
+            <img src="5.jpg"  id="width" onclick="myFunction(this);">
+        </div>
+        <div class="galary-box">
+            <img src="6.jpg"  id="width" onclick="myFunction(this);">
+        </div>
+        <div class="galary-box">
+            <img src="7.jpg" id="width" onclick="myFunction(this);">
+        </div>
+        <div class="galary-box">
+            <img src="8.jpg"  id="width" onclick="myFunction(this);">
+        </div>
+    </div>
+
+    <div class="container">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <img id="expandedImg" style="width:100%">
+        <div id="imgtext"></div>
+    </div>
+
+    <script>
+
+        function myFunction(imgs) {
+            var expandImg = document.getElementById("expandedImg");
+            var imgText = document.getElementById("imgtext");
+            expandImg.src = imgs.src;
+            imgText.innerHTML = imgs.alt;
+            expandImg.parentElement.style.display = "flex";
+        }
+    </script>
+
+</body>
+
+</html>
